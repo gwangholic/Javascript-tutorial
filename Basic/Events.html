@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events and Event Handlers</title>
+</head>
+<body>
+    <button type="button" onclick="alert('Hello World!')">Click Me</button>
+    <button type="button" id="myBtn">Click Me</button>
+    <script>
+        function sayHello() {
+            alert('Hello World!');
+        }
+        document.getElementById("myBtn").onclick = sayHello;
+    </script>
+    <br>
+    <!-- Mouse Events -->
+    <h3>The Click Event (onclick)</h3>
+    <button type="button" onclick="alert('You have clicked a button!');">Click Me</button>
+    <a href="#" onclick="alert('You have clicked a link!');">Click Me</a>
+    
+    <h3>The Contextmenu Event (oncontextmenu)</h3>
+    <button type="button" oncontextmenu="alert('You have right-clicked a button!');">Right Click on Me</button>
+    <a href="#" oncontextmenu="alert('You have right-clicked a link!');">Right Click on Me</a>
+    
+    <h3>The Mouseover Event (onmouseover)</h3>
+    <button type="button" onmouseover="alert('You have placed mouse pointer over a button!');">Place Mouse Over Me</button>
+    <a href="#" onmouseover="alert('You have placed mouse pointer over a button!');">Place Mouse Over Me</a>
+    
+    <h3>The Mouseout Event (onmouseout)</h3>
+    <button type="button" onmouseout="alert('You have moved out of the button!');">Place Mouse Inside Me and Move Out</button>
+    <a href="#" onmouseout="alert('You have moved out of the button!');">Place Mouse Inside Me and Move Out</a>
+    <!-- Keyboard Events -->
+    <h3>The Keyboard Event (onkeydown)</h3>
+    <input type="text" onkeydown="alert('You have pressed a key inside text input!')">
+    <textarea onkeydown="alert('You have pressed a key inside textarea')"></textarea>    
+
+    <h3>The Keyup Event (onkeyup)</h3>
+    <input type="text" onkeyup="alert('You have released a key inside text input')">
+    <textarea onkeyup="alert('You have released a key inside textarea!')"></textarea>
+
+    <h3>The Keypress Event (onkeypress)</h3>
+    <input type="text" onkeypress="alert('You have pressed a key inside text input!')">
+    <textarea onkeypress="alert('You have pressed a key inside textarea')"></textarea>
+
+    <!-- Form Events-->
+    <h3>The Focus Event (onfucus)</h3>
+    <script>
+        function highlightInput(elm) {
+            elm.style.background = "yellow";
+        }
+    </script>
+    <input type="text" onfocus="highlightInput(this)">
+    <button type="button">Button</button>
+
+    <h3>The Blur Event (onblur)</h3>
+    <input type="text" onblur="alert('Text input loses focus!')">
+    <button type="button">Submit</button>
+
+    <h3>The Change Event (onchange)</h3>
+    <select onchange="alert('You have changed the selection!')">
+        <option>Select</option>
+        <option>Male</option>
+        <option>Female</option>
+    </select>
+
+    <h3>The Submit Event (onsubmit)</h3>
+    <form action="#" method="post" onsubmit="alert('Form data will be submitted to the server!')">
+        <label>First Name:</label>
+        <input type="text" name="first-name" required>
+        <input type="submit" value="Submit">
+    </form>
+
+    <!-- Document/Window Events -->
+    <h3>The Load Event (onload)</h3>
+    <body onlead="window.alert('Page is loaded successfully!')">
+        <h1>This is a heading</h1>
+        <p>This is paragraph of text.</p>
+    </body>
+
+    <h3>The Unload Event (onunload)</h3>
+    <body onunlead="window.alert('Are you sure you want to leave this page?')">
+        <h1>This is a heading</h1>
+        <p>This is paragraph of text.</p>
+    </body>
+
+    <h3>The Resize Event (onresize)</h3>
+    <p id="result"></p>
+    <script>
+        function displayWindowSize(){
+            var w = window.outerWidth;
+            var h = window.outerHeight;
+            var txt = "Window size: width=" + w + ", height=" + h;
+            document.getElementById("result").innerHTML = txt;
+        }
+        window.onresize = displayWindowSize;
+    </script>
+</body>
+</html>
