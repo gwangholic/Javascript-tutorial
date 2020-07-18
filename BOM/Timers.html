@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // Executing Code After a Delay
+        function myFunction() {
+            alert('Hello World!');
+        }
+
+        // Executing Code at Regular Intervals
+        function showTime() {
+            var d = new Date();
+            document.getElementById("clock").innerHTML = d.toLocaleTimeString();
+        }
+        var intervalID = setInterval(showTime, 1000);
+
+        // Stopping Code Execution or Cancelling a Timer
+        var timeoutID;
+
+        function delayedAlert() {
+            timeoutID = setTimeout(showAlert, 2000);
+        }
+
+        function showAlert() {
+            alert('This is a JavaScript alert box.');
+        }
+
+        function clearAlert() {
+            clearTimeout(timeoutID);
+        }
+        
+        function stopClock() {
+            clearInterval(intervalID);
+        }
+    </script>
+
+    <p>The current time on your computer is: <span id="clock"></span></p>
+    <button onclick="setTimeout(myFunction, 2000);">Click Me</button>
+    <button onclick="delayedAlert();">Show Alert After Two Seconds</button> 
+    <button onclick="clearAlert();">Cancel Alert Before It Display</button>
+    <button onclick="stopClock();">Stop Clock</button>
+</body>
+</html>

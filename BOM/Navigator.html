@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // Detect Whether the Browser is Online or Offline
+        function checkConnectionStatus() {
+            if(navigator.onLine) {
+                alert("Application is online.");
+            } else {
+                alert("Application is offline.");
+            }
+        }
+        function goOnline() {
+            // Action to be performed when your application goes online
+            alert("And we're back!");
+        }
+
+        function goOffline() {
+            // Action to be performed when your application goes offline
+            alert("Hey, it looks like you're offline.");
+        }
+
+        // Attaching event handler for the online event
+        window.addEventListener("online", goOnline);
+
+        // Attaching event handler for the offline event
+        window.addEventListener("offline", goOffline);
+
+        // Check Whether Cookies Are Enabled or Not
+        function checkCookieEnabled() {
+            if(navigator.cookieEnabled) {
+                alert("Cookies are enabled in your browser");
+            } else {
+                alert("Cookies are disabled in your browser");
+            }
+        }
+
+        // Detecting the Browser Language
+        function checkLanguage() {
+            alert("Your browser's UI language is: " + navigator.language);
+        }
+        
+        // Getting Browser Name and Version Information
+        function getBrowserInformation() {
+            var info = "\n App Name: " + navigator.appName;
+            info += "\n App Version: " + navigator.appVersion;
+            info += "\n App Code Name: " + navigator.appCodeName;
+            info += "\n User Agent: " + navigator.userAgent;
+            info += "\n Platform: " + navigator.platform;
+
+            alert("Here're the information related to your browser: " + info);
+        }
+
+        // Check Whether the Browser is Java Enabled or Not
+        function checkJavaEnabled() {
+            if(navigator.javaEnabled()) {
+                alert("Your browser is Java enabled.");
+            } else {
+                alert("Your browser is not Java enabled.");
+            }
+        }
+    </script>
+
+    <button type="button" onclick="checkConnectionStatus();">Check Connection Status</button>
+    <button type="button" onclick="checkCookieEnabled();">Check If Cookies are Enabled</button>
+    <button type="button" onclick="checkLanguage();">Check Language</button>
+    <button type="button" onclick="getBrowserInformation();">Get Browser Information</button>
+    <button type="button" onclick="checkJavaEnabled();">Check If Java is Enabled</button>
+</body>
+</html>

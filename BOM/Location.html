@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // Geting the Current Page URL
+        function getURL() {
+            alert("The URL of this page is: " + window.location.href);
+        }
+
+        // Getting Different Part of a URL
+        // Prints complete URL
+        document.write(window.location.href + "<br>");
+
+        // Prints protocol like http: or https:
+        document.write(window.location.protocol + "<br>");
+
+        // Prints hostname with port like localhost or lacalhost:3000
+        document.write(window.location.host + "<br>");
+
+        // Prints hostname like localhost or www.example.com
+        document.write(window.location.hostname + "<br>");
+
+        // Prints port number like 3000
+        document.write(window.location.port + "<br>");
+
+        // Prints pathname like .products/search.php
+        document.write(window.location.pathname + "<br>");
+
+        // Prints query string like ?q=ipad
+        document.write(window.location.search + "<br>");
+
+        // Prints fragment identifier like #featured
+        document.write(window.location.hash + "<br>");
+
+        // Loading New Documents
+        function loadHomePage() { 
+            window.location.assign("https://tutorialrepublic.com");';'
+        }
+
+        // Reloading the Page Dynamically
+        function forceReload() {
+            window.location.reload(true);
+        }
+    </script>
+
+    <button type="button" onclick="getURL();">Get Page URL</button>
+    <button type="button" onclick="loadHomePage();">Load Home Page</button>
+    <button type="button" onclick="forceReload();">Reload Page</button>
+</body>
+</html>

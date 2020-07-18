@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // Getting the Number of Pages Visited
+        function getViews() {
+            alert("You've accessed " + history.length + " web pages in this session.");
+        }
+
+        // Going Back to the Previous Page
+        function goBack() {
+            window.history.back();
+        }
+
+        // Going Forward to the Next Page
+        function goForward() {
+            window.history.forward();
+        }
+
+        window.history.go(-2);  // Go back two pages
+        window.history.go(-1); // Go back one page
+        window.history.go(0);  // Reload the current page
+        window.history.go(1);  // Go forward one page
+        window.history.go(2);  // Go forward two pages
+    </script>
+
+    <button type="button" onclick="getViews();">Get Views Count</button>
+    <button type="button" onclick="goBack();">Go Back</button>
+    <button type="button" onclick="goForward();">Go Forward</button>
+</body>
+</html>
