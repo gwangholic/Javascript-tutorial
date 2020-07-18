@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="main">Hello World!</div>
+    <p id="hint">This is a simple paragraph.</p>
+
+    <script>
+        var parentElem = document.getElementById("main");
+        var oldPara = document.getElementById("hint");
+
+        // Creating new element
+        var newPara = document.createElement("p");
+        var newContent = document.createTextNode("This is a new paragraph.");
+        newPara.appendChild(newContent);
+
+        // Replacing old paragraph with newly created paragraph
+        parentElem.replaceChild(newPara, oldPara);
+    </script>
+</body>
+</html>

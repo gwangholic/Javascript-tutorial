@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- beforebegin -->
+    <div id="main">
+        <!-- afterbegin -->
+        <h1 id="title">Hello World!</h1>
+        <!-- beforeend -->
+    </div>
+    <!-- afterend -->
+    
+    <script>
+    // Selecting target element
+    var mainDiv = document.getElementById("main");
+    
+    // Inserting HTML just before the element itself, as a previous sibling
+    mainDiv.insertAdjacentHTML('beforebegin', '<p>This is paragraph one.</p>');
+    
+    // Inserting HTML just inside the element, before its first child
+    mainDiv.insertAdjacentHTML('afterbegin', '<p>This is paragraph two.</p>');
+    
+    // Inserting HTML just inside the element, after its last child
+    mainDiv.insertAdjacentHTML('beforeend', '<p>This is paragraph three.</p>');
+    
+    // Inserting HTML just after the element itself, as a next sibling
+    mainDiv.insertAdjacentHTML('afterend', '<p>This is paragraph four.</p>');
+    </script>
+</body>
+</html>

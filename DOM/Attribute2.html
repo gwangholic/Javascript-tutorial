@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button type="button" id="myBtn">Click Me</button>
+    <a href="#" id="myLink">Tutorial Republic</a>
+
+    <!-- Setting Attributes on Elements -->
+    <script>
+        // Selecting the element
+        var btn = document.getElementById("myBtn");
+
+        // Settitng new attributes
+        btn.setAttribute("class", "click-btn");
+        btn.setAttribute("disabled", "");
+    </script>
+
+    <script>
+        // Selecting the element
+        var link = document.getElementById("myLink");
+        
+        // Changing the href attribute value
+        link.setAttribute("href", "https://www.tutorialrepublic.com");
+    </script>
+</body>
+</html>

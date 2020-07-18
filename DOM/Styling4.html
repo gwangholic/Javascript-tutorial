@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Add or Replace CSS Classes Demo</title>
+<style>
+    .highlight {
+        background: yellow;
+    }
+</style>
+</head>
+<body>
+    <div id="info" class="disabled">Something very important!</div>
+
+    <!-- Adding CSS Classes to Elements -->
+    <script>
+        // Selecting element
+        var elem = document.getElementById("info");
+
+        elem.className = "note"; // Add or replace all classes with note class
+        elem.className += " highlight"; // Add a new class highlight
+    </script>
+</body>
+</html>
